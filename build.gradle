@@ -2,10 +2,10 @@ apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'idea'
 
-group "org.sample"
+group "hillermann.carl.learning"
 version "1.0"
 
-mainClassName = "org.sample.myapp.Main"
+mainClassName = "hillermann.carl.learning.baseapp.Main"
 
 dependencies {
     compile "org.sample:required-project-with-dep:1.0"
