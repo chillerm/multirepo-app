@@ -1,0 +1,6 @@
+[submodule "modules/required-project"]
+	path = modules/required-project
+	url = https://github.com/chillerm/required-project.git
+[submodule "modules/required-project-with-dep"]
+	path = modules/required-project-with-dep
+	url = https://github.com/chillerm/required-project-with-dep.git
