@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'idea'
+
+group "org.sample"
+version "1.0"
+
+mainClassName = "org.sample.myapp.Main"
+
+dependencies {
+    compile "org.sample:required-project-with-dep:1.0"
+    compile "org.sample:required-project:1.0"
+}
+
+repositories {
+    ivy {
+        url project.file("../local-repo")
+    }
+    jcenter()
+}
+
+// START SNIPPET publishDeps
+task publishDeps {
+    dependsOn gradle.includedBuilds*.task(':uploadArchives')
+}
+// END SNIPPET publishDeps
